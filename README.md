@@ -9,6 +9,7 @@ BarkBond is a web application dedicated to helping rescue pets find their foreve
 - [Getting Started](#getting-started)
 - [Project Structure](#project-structure)
 - [Database Schema](#database-schema)
+- [Status](#status)
 
 ## Features
 
@@ -61,6 +62,7 @@ BarkBond is a web application dedicated to helping rescue pets find their foreve
 3. Update the database configuration in `src/main/resources/application.properties` if necessary.
 
 4. Build the project:
+   git push origin master
 
    ```sh
    ./mvnw clean install
@@ -125,3 +127,7 @@ BarkBond is a web application dedicated to helping rescue pets find their foreve
 | user_id     | Integer | Foreign key to User     |
 | role_name   | String  | Role name (e.g., ADMIN) |
 | create_date | Date    | Role assignment date    |
+
+### Status
+
+This project is currently under development and is not yet complete.
