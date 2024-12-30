@@ -1,0 +1,391 @@
+html,
+body {
+  /*height: 100%;*/
+  /*height: calc(100vh - 72px - 150px); !* 100vh is the full height of the viewport, 72px is the height of the header, and 150px is the height of the footer *!*/
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-img-size-1 {
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex: 1; /* Take up the remaining space between header and footer */
+  width: 100%;
+}
+
+/*.locationBarContainer{*/
+/*    position: relative;*/
+/*    height: 45px;*/
+/*}*/
+
+.locationBar {
+  display: flex; /* This makes the location bar a flex container */
+  align-items: center; /* This vertically aligns the items in the location bar */
+  justify-content: flex-start; /* This aligns the items to the start of the location bar */
+  position: relative;
+  background-color: #ffdb6c;
+  /*#504746*/
+  height: 55px;
+  width: 100%;
+  /*z-index: 1;*/
+  align-content: center;
+  padding-left: 20%;
+  /*box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);*/
+  margin-right: 10px;
+}
+
+.dropdown-pet-type .location-search .filters-btn {
+  height: 36px;
+}
+
+.filters-btn {
+  background-color: white;
+  color: #333;
+  border: 1px solid #333;
+  height: 30px;
+  width: 80px;
+}
+
+.locationBarContainer {
+  position: relative;
+  height: 55px;
+  z-index: 1;
+}
+
+.location-search {
+  width: 35%;
+}
+
+.dropdown-pet-type {
+  margin-right: 12px;
+}
+
+/*.locationBar {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: flex-start;*/
+/*    position: relative;*/
+/*    background-color: #ffdb6c;*/
+/*    height: 60px;*/
+/*    width: 100%;*/
+/*    z-index: 0;*/
+/*    padding-left: 300px;*/
+/*    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);*/
+
+/*}*/
+
+.dropdown-petType {
+  width: 230px;
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+}
+
+.dropdown-petType > a::after {
+  content: "";
+  float: right;
+  margin: 15px 15px 0 0;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid #333;
+}
+
+.dropdown-petType ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 6px 5px -5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.dropdown-petType:hover ul {
+  max-height: 500px; /* Adjust based on the number of items */
+}
+
+.dropdown-petType a,
+.dropdown-petType > label {
+  display: block;
+  padding: 0 10px;
+  text-decoration: none;
+  line-height: 40px;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #333;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.dropdown-petType li {
+  height: auto;
+  overflow: hidden;
+}
+
+.dropdown-petType li a {
+  border-bottom: 1px solid #eee;
+}
+
+.form-control.location {
+  position: relative;
+  display: block;
+  width: 240px;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin-left: 15px;
+}
+
+.sideBar {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: flex-start; /* Align content to the top */
+
+  position: fixed;
+  top: 0;
+  flex-shrink: 0;
+  height: 100vh;
+  width: 250px;
+  /*height: calc(100vh - 72px - 30px); !* 72px is the height of the header and 30px is the height of the footer *!*/
+  background-color: white;
+  /*z-index: 1;*/
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/*.sideBar {*/
+/*    display: flex;*/
+/*    justify-content: center; !* Center content horizontally *!*/
+/*    align-items: flex-start; !* Align content to the top *!*/
+/*    padding-top: 50px; !* Add 50px gap on top *!*/
+/*}*/
+
+.filters-container {
+  width: calc(100% - 10px); /* 20px gap on left and right */
+  margin: 0 5px; /* Ensure 20px gap on left and right */
+}
+
+.dropdown-age {
+  margin-top: 140px;
+  width: 100%;
+  /*width: 300px;*/
+}
+
+/*---------------------------------------------*/
+
+#pageNumberBar {
+  position: sticky;
+  bottom: 0;
+  /*width: 100%;*/
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#cardContainer {
+  /*overflow: auto;*/
+  /*flex-grow:1;*/
+  /*display: flex;*/
+  /*justify-content: center;*/
+  /*width: 75%;*/
+  /*margin-top: 70px;*/
+  /*margin-left: 20%;*/
+  /*margin: 60px auto;*/
+  margin: 0 auto; /* Centers the container horizontally */
+  width: 65%;
+  /*display: flex;*/
+  /*justify-content: center;*/
+}
+
+/*#cards-wrapper{*/
+/*    margin: 60px auto; !* Centers #cardContainer horizontally on the page *!*/
+/*    width: 100%; !* Adjust the width as needed *!*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*}*/
+
+/*#cards {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: start;*/
+/*    gap: 10px;*/
+/*    row-gap: 50px ;*/
+/*    !*align-content: flex-start;*!*/
+/*    max-width: 100%; !* Ensures it doesn’t exceed the parent’s width *!*/
+/*}*/
+
+#cards-wrapper {
+  display: grid;
+  /*justify-content: center; !* Centers the grid within the wrapper *!*/
+  width: 100%;
+  margin-top: 25px;
+}
+
+#cards {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(200px, 1fr)
+  ); /* Responsive columns */
+  gap: 25px !important;
+  justify-items: start; /* Aligns items to the start of each cell */
+  align-items: start; /* Aligns items to the start of each cell vertically */
+}
+
+/*.card-outline{*/
+/*    width: 200px;*/
+/*    height: 280px;*/
+/*    border-radius: 5%;*/
+/*}*/
+
+.card {
+  width: 240px;
+  height: 300px;
+  max-width: 1600px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.card:hover {
+  /*outline: 2px solid #0cbfde;*/
+  /*outline-offset: 6px;*/
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 24px 0 rgba(0, 0, 0, 0.35);
+}
+
+.cardImg {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card-contents {
+  padding: 5px 10px 0 10px;
+  overflow: hidden; /* Ensure content does not spill out */
+  text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+  white-space: nowrap;
+}
+
+.card-contents h5,
+.card-contents p {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Ensure content does not spill out */
+  text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.card-contents h5 {
+  padding: 1px;
+  line-height: 0;
+}
+
+.cardTextContainer {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.card-contents p {
+  line-height: 1.2;
+  font-size: 0.9em;
+}
+
+/*---------Next Page Number Bar (pagination)---------*/
+
+#pageNumContainer {
+  display: flex;
+  justify-content: center;
+  margin-left: 200px;
+  margin-bottom: 20px;
+}
+
+.pagination {
+  display: inline-block;
+  background-color: #ffffff;
+  border-radius: 40px;
+  margin-top: 60px;
+}
+
+.pagination a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #0cc0df;
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 40px;
+}
+
+.material-icons-round.arrows:hover {
+  color: #0cc0df;
+}
+
+.dropdown-age {
+  width: 500px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 12px 0px;
+  border-radius: 4px;
+}
+
+.dropdown-age label,
+.dropdown-age input,
+.dropdown-age .form-check {
+  display: block;
+  margin-bottom: 10px;
+  font-family: "Open Sans", Gotham, gotham, Tahoma, Geneva, sans-serif;
+  font-size: 93.75%;
+  color: rgb(42, 42, 51);
+}
+
+.dropdown-age .btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.dropdown-age .form-control {
+  box-sizing: border-box;
+}
+
+.dropdown-age .form-check-input {
+  margin-right: 10px;
+}
+
+.btn-apply {
+  background-color: #0cc0df;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  width: 100%;
+}
