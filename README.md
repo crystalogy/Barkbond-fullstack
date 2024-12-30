@@ -41,7 +41,15 @@ BarkBond is a web application dedicated to helping rescue pets find their foreve
 
 ### Installation
 
-1. Set up the MySQL database:
+1. **Clone the repository**:
+
+   ```sh
+   git clone https://github.com/crystalogy/Barkbond-fullstack.git
+   cd Barkbond-fullstack
+
+   ```
+
+2. Set up the MySQL database:
 
    ```sql
    CREATE DATABASE barkbond;
@@ -50,25 +58,51 @@ BarkBond is a web application dedicated to helping rescue pets find their foreve
    FLUSH PRIVILEGES;
    ```
 
-2. Update the database configuration in `src/main/resources/application.properties` if necessary.
+3. Update the database configuration in `src/main/resources/application.properties` if necessary.
 
-3. Build the project:
+4. Build the project:
 
    ```sh
    ./mvnw clean install
    ```
 
-4. Run the application:
+5. Run the application:
 
    ```sh
    ./mvnw spring-boot:run
    ```
 
-5. Open your browser and navigate to [http://localhost:8080].
+6. Open your browser and navigate to [http://localhost:8080].
 
 ## Project Structure
 
-├── .gitignore ├── .idea/ ├── .mvn/ ├── assets/ ├── src/ │ ├── main/ │ │ ├── java/ │ │ │ └── com/ │ │ │ └── barkbond/ │ │ │ ├── controller/ │ │ │ ├── database/ │ │ │ ├── form/ │ │ │ ├── security/ │ │ │ └── service/ │ │ ├── resources/ │ │ │ └── application.properties │ │ └── webapp/ │ │ └── WEB-INF/ │ │ └── jsp/ │ └── test/ │ └── java/ ├── target/ ├── mvnw ├── mvnw.cmd ├── package.json ├── pom.xml └── README.md
+├── .gitignore
+├── .idea/
+├── .mvn/
+├── assets/
+├── src/
+│ ├── main/
+│ │ ├── java/
+│ │ │ └── com/
+│ │ │ └── barkbond/
+│ │ │ ├── controller/
+│ │ │ ├── database/
+│ │ │ ├── form/
+│ │ │ ├── security/
+│ │ │ └── service/
+│ │ ├── resources/
+│ │ │ └── application.properties
+│ │ └── webapp/
+│ │ └── WEB-INF/
+│ │ └── jsp/
+│ └── test/
+│ └── java/
+├── target/
+├── mvnw
+├── mvnw.cmd
+├── package.json
+├── pom.xml
+└── README.md
 
 ## Database Schema
 
